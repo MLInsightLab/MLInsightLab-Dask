@@ -1,5 +1,8 @@
 FROM python:3.12
 
+# Update software
+RUN apt update && apt upgrade -y && apt autoremove -y
+
 # Install Python packages
 RUN pip install --no-cache-dir --upgrade pip dask[complete] msgpack toolz
 
