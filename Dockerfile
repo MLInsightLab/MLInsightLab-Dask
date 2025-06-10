@@ -2,7 +2,7 @@ FROM python:3.12-slim
 
 # Update software
 RUN apt update && apt upgrade -y && apt autoremove -y
-RUN apt install build-essential
+RUN apt install build-essential -y
 
 # Install Python packages
 RUN pip install --no-cache-dir --upgrade pip dask[complete] msgpack toolz
