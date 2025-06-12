@@ -1,4 +1,4 @@
-FROM python:3.12-alpine
+FROM python:3.12-slim
 
 # Update/install required software
 RUN apt update && apt upgrade -y && apt autoremove -y
